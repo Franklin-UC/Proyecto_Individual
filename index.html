@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- 
-    Laboratorio 05 - HTML Semántico
+    Laboratorio 06 - Formularios
     Autor: Franklin Ronald Ulloa Chura
     -->
     <header>
@@ -63,6 +63,7 @@
                             <summary>📞 Contacto</summary>
                             <ul>
                                 <li><a href="#info-contacto">Información de contacto</a></li>
+                                <li><a href="#form-contacto">Enviar Mensaje</a></li> 
                                 <li><a href="#redes-sociales">Redes sociales</a></li>
                                 <li><a href="mailto:fulloac@unsa.edu.pe">Enviar email</a></li>
                             </ul>
@@ -361,6 +362,59 @@
                 <br>
                 ¡Estaré encantado de conocer a otros entusiastas de la tecnología!
             </p>
+            <section aria-labelledby="form-contacto">
+                <h3 id="form-contacto">🤝 Envíame un Mensaje o Propuesta</h3>
+                <form action="#" method="POST">
+                    <fieldset>
+                        <legend>Datos de Contacto</legend>
+                        
+                        <div>
+                            <label for="nombre_contacto">Nombre Completo (*):</label>
+                            <input type="text" id="nombre_contacto" name="nombre_contacto" 
+                                   placeholder="Tu nombre y apellido" required>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="email_contacto">Correo Electrónico (*):</label>
+                            <input type="email" id="email_contacto" name="email_contacto" 
+                                   placeholder="ejemplo@dominio.com" required>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <label for="tel_contacto">Teléfono:</label>
+                            <input type="tel" id="tel_contacto" name="tel_contacto" 
+                                   placeholder="Ej: 987654321" 
+                                   pattern="[0-9]{9,12}" 
+                                   title="Ingrese solo números, mínimo 9 dígitos.">
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="consulta_tipo">Motivo de tu mensaje (*):</label>
+                            <select id="consulta_tipo" name="consulta_tipo" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="proyecto">Propuesta de Proyecto/Trabajo</option>
+                                <option value="colaboracion">Colaboración Académica</option>
+                                <option value="saludo">Saludo / Feedback</option>
+                                <option value="otro">Otro Motivo</option>
+                            </select>
+                        </div>
+                        <br>
+                        
+                        <div>
+                            <label for="mensaje_contacto">Mensaje Detallado (*):</label>
+                            <textarea id="mensaje_contacto" name="mensaje_contacto" rows="5" 
+                                      placeholder="Describe el proyecto o el motivo de tu contacto aquí..." required></textarea>
+                        </div>
+                        <br>
+                        
+                        <button type="submit">Enviar Mensaje</button>
+                        <button type="reset">Restablecer</button>
+                    </fieldset>
+                </form>
+            </section>
 
             <!-- SECTION: Tabla de contacto -->
             <section aria-labelledby="info-contacto">
@@ -456,7 +510,7 @@
                 <small>
                     Desarrollado con HTML5 | Proyecto Individual - Introducción al Desarrollo Web
                     <br>
-                    <strong>Laboratorio 05: HTML Semántico</strong> - Implementando elementos semánticos para mejor accesibilidad y SEO
+                    <strong>Laboratorio 06 - Formularios</strong> - Implementando Formularios
                     <br>
                     Contacto: <a href="mailto:fulloac@unsa.edu.pe">fulloac@unsa.edu.pe</a>
                 </small>
