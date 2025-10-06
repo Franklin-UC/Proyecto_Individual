@@ -3,342 +3,466 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personal de Franklin Ronald Ulloa Chura - Estudiante de Ingeniería de Sistemas especializado en desarrollo web">
+    <meta name="keywords" content="desarrollo web, portfolio, programación, HTML5, CSS3, JavaScript">
+    <meta name="author" content="Franklin Ronald Ulloa Chura">
     <title>TechPortfolio - Mi Portafolio Digital | Franklin Ronald Ulloa Chura</title>
 </head>
 <body>
     <!-- 
-    Laboratorio 04 - Proyecto Personal
+    Laboratorio 05 - HTML Semántico
     Autor: Franklin Ronald Ulloa Chura
-    Colaboración: 
-    Descripción: Portfolio personal implementando listas, hipervínculos y tablas
     -->
-
-    <h1>🚀 TechPortfolio - Mi Espacio Digital</h1>
-
-    <!-- Navegación interna con hipervínculos -->
-    <h2>🧭 Navegación</h2>
-    <ul>
-        <li><a href="#sobre-mi">👨‍💻 Sobre mí</a></li>
-        <li><a href="#habilidades">💻 Habilidades Técnicas</a></li>
-        <li><a href="#proyectos">🛠️ Mis Proyectos</a></li>
-        <li><a href="#aprendizaje">📚 Plan de Aprendizaje</a></li>
-        <li><a href="#contacto">📞 Contacto</a></li>
-    </ul>
-
-    <hr>
-
-    <p>
-        <strong>¡Bienvenido a mi portafolio digital!</strong> Este es mi espacio personal donde 
-        comparto mi journey como estudiante de Ingeniería de Sistemas, mis proyectos, 
-        aprendizajes y visión del futuro tecnológico.
-        <br><br>
-        Este sitio web servirá como base para mi <em>Proyecto Individual</em> del curso 
-        y evolucionará a medida que adquiera nuevos conocimientos en desarrollo web.
-    </p>
-
-    <hr>
-
-    <h2 id="sobre-mi">👨‍💻 Sobre mí como futuro desarrollador</h2>
-    <p>
-        Soy Franklin Ronald Ulloa Chura, un estudiante apasionado por la tecnología que busca especializarse 
-        en desarrollo web full-stack. Mi objetivo es crear aplicaciones web que no solo 
-        funcionen perfectamente, sino que también ofrezcan experiencias excepcionales a los usuarios.
-    </p>
-
-    <!-- Enlace externo que abre en nueva pestaña -->
-    <p>
-        <a href="https://www.javascript.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/120px-JavaScript-logo.png" 
-                 alt="JavaScript - Mi lenguaje favorito" width="100" height="100">
-        </a>
-    </p>
-
-    <!-- Lista anidada de comidas favoritas -->
-    <h3>🍕 Mis 5 Comidas Favoritas (para programar mejor)</h3>
-    <ul>
-        <li>Pizza Margherita</li>
-        <li>Sushi Variado</li>
-        <li>Ceviche Peruano</li>
-        <li>Hamburguesa Artesanal</li>
-        <li>Café de Especialidad</li>
-    </ul>
-
-    <h2 id="habilidades">💻 Habilidades Técnicas en Desarrollo</h2>
-
-    <!-- Lista ordenada de algoritmo -->
-    <h3>📝 Mi Algoritmo de Aprendizaje Diario</h3>
-    <ol>
-        <li>Revisar conceptos del día anterior</li>
-        <li>Estudiar nuevo tema por 2 horas</li>
-        <li>Practicar con ejercicios hands-on</li>
-        <li>Documentar lo aprendido en mi blog personal</li>
-        <li>Hacer commit de código en GitHub</li>
-        <li>Si hay dudas: buscar en Stack Overflow o documentación oficial</li>
-        <li>Repetir hasta dominar el concepto</li>
-    </ol>
-
-    <!-- Lista anidada de habilidades técnicas -->
-    <h3>Frontend Development</h3>
-    <ul>
-        <li><strong>Tecnologías que domino:</strong>
-            <ul>
-                <li><u>HTML5</u> - Estructura semántica y accesible
-                    <ul>
-                        <li>Elementos semánticos</li>
-                        <li>Formularios avanzados</li>
-                        <li>Multimedia</li>
-                    </ul>
-                </li>
-                <li><mark>CSS3</mark> - Diseño responsive y animaciones
-                    <ul>
-                        <li>Flexbox y Grid</li>
-                        <li>Animaciones CSS</li>
-                        <li>Media queries</li>
-                    </ul>
-                </li>
-                <li><em>JavaScript</em> - Interactividad y lógica del cliente
-                    <ul>
-                        <li>ES6+ Features</li>
-                        <li>DOM Manipulation</li>
-                        <li>Async/Await</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-
-    <!-- Enlaces a imágenes con hipervínculos externos -->
-    <p>
-        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" 
-                 alt="HTML5" width="60" height="60">
-        </a>
-        <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/120px-CSS3_logo_and_wordmark.svg.png" 
-                 alt="CSS3" width="60" height="60">
-        </a>
-    </p>
-
-    <h4>Backend Development (En aprendizaje)</h4>
-    <ul>
-        <li>Node.js para desarrollo del lado del servidor</li>
-        <li>Python con frameworks:
-            <ul>
-                <li>Django</li>
-                <li>Flask</li>
-                <li>FastAPI</li>
-            </ul>
-        </li>
-        <li>Bases de datos:
-            <ul>
-                <li>MySQL - Relacionales</li>
-                <li>MongoDB - NoSQL</li>
-                <li>PostgreSQL - Avanzado</li>
-            </ul>
-        </li>
-        <li>APIs RESTful y GraphQL</li>
-    </ul>
+    <header>
+        <h1>🚀 TechPortfolio - Mi Espacio Digital</h1>
+        <!-- NAV: Menú de navegación principal interactivo con details/summary -->
+        <nav aria-label="Navegación principal">
+            <details open>
+                <summary>🧭 Menú de Navegación</summary>
+                <ul>
+                    <li>
+                        <details>
+                            <summary>👨‍💻 Sobre mí</summary>
+                            <ul>
+                                <li><a href="#sobre-mi">Mi perfil profesional</a></li>
+                                <li><a href="#comidas">Mis comidas favoritas</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>💻 Habilidades Técnicas</summary>
+                            <ul>
+                                <li><a href="#algoritmo">Algoritmo de aprendizaje</a></li>
+                                <li><a href="#frontend">Frontend Development</a></li>
+                                <li><a href="#backend">Backend Development</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>🛠️ Mis Proyectos</summary>
+                            <ul>
+                                <li><a href="#estado-proyectos">Estado de proyectos</a></li>
+                                <li><a href="#fases-desarrollo">Fases de desarrollo</a></li>
+                                <li><a href="https://github.com/Franklin-UC" target="_blank" rel="noopener noreferrer">Ver en GitHub</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>📚 Plan de Aprendizaje</summary>
+                            <ul>
+                                <li><a href="#proximo-trimestre">Próximos 3 meses</a></li>
+                                <li><a href="#recursos">Recursos de aprendizaje</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>📞 Contacto</summary>
+                            <ul>
+                                <li><a href="#info-contacto">Información de contacto</a></li>
+                                <li><a href="#redes-sociales">Redes sociales</a></li>
+                                <li><a href="mailto:fulloac@unsa.edu.pe">Enviar email</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </nav>
+    </header>
 
     <hr>
+    <main>
+        <section aria-labelledby="bienvenida">
+            <p>
+                <strong>¡Bienvenido a mi portafolio digital!</strong> Este es mi espacio personal donde 
+                comparto mi journey como estudiante de Ingeniería de Sistemas, mis proyectos, 
+                aprendizajes y visión del futuro tecnológico.
+                <br><br>
+                Este sitio web servirá como base para mi <em>Proyecto Individual</em> del curso 
+                y evolucionará a medida que adquiera nuevos conocimientos en desarrollo web.
+            </p>
+        </section>
 
-    <h2 id="proyectos">🛠️ Mis Proyectos Actuales y Futuros</h2>
+        <hr>
 
-    <!-- Tabla de proyectos -->
-    <h3>📋 Estado de Mis Proyectos</h3>
-    <table border="1">
-        <tr>
-            <th colspan="5">Mis Proyectos de Desarrollo</th>
-        </tr>
-        <tr>
-            <th>Proyecto</th>
-            <th>Tecnologías</th>
-            <th>Estado</th>
-            <th>Progreso</th>
-            <th>Enlace</th>
-        </tr>
-        <tr>
-            <td>TechPortfolio</td>
-            <td>HTML5, CSS3</td>
-            <td>En desarrollo</td>
-            <td>70%</td>
-            <td><a href="https://github.com/Franklin-UC/techportfolio" target="_blank">GitHub</a></td>
-        </tr>
-        <tr>
-            <td>Calculadora Web</td>
-            <td>HTML, CSS, JavaScript</td>
-            <td>Planificado</td>
-            <td>0%</td>
-            <td>Próximamente</td>
-        </tr>
-        <tr>
-            <td>Sistema de Tareas</td>
-            <td>React.js, Node.js</td>
-            <td>Planificado</td>
-            <td>0%</td>
-            <td>Próximamente</td>
-        </tr>
-        <tr>
-            <td>Blog Tecnológico</td>
-            <td>HTML, CSS, JavaScript</td>
-            <td>Diseño</td>
-            <td>15%</td>
-            <td>En análisis</td>
-        </tr>
-        <tr>
-            <th colspan="3">Proyectos Completados</th>
-            <td colspan="2">1 de 4</td>
-        </tr>
-    </table>
+        <article id="sobre-mi">
+            <header>
+                <h2>👨‍💻 Sobre mí como futuro desarrollador</h2>
+            </header>
+            
+            <p>
+                Soy <mark>Franklin Ronald Ulloa Chura</mark>, un estudiante apasionado por la tecnología que busca especializarse 
+                en desarrollo web full-stack. Mi objetivo es crear aplicaciones web que no solo 
+                funcionen perfectamente, sino que también ofrezcan experiencias excepcionales a los usuarios.
+            </p>
 
-    <h3>Lista Ordenada: Fases de Desarrollo de Proyectos</h3>
-    <ol>
-        <li>Análisis de requerimientos</li>
-        <li>Diseño de la arquitectura</li>
-        <li>Creación de mockups y wireframes</li>
-        <li>Desarrollo del frontend</li>
-        <li>Si requiere backend: implementar lógica del servidor</li>
-        <li>Integración de ambos lados</li>
-        <li>Testing y depuración</li>
-        <li>Deploy a producción</li>
-        <li>Mantenimiento y actualizaciones</li>
-    </ol>
-
-    <!-- Enlace con imagen a GitHub -->
-    <p>
-        <a href="https://github.com/Franklin-UC" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/120px-Octicons-mark-github.svg.png" 
-                 alt="GitHub - Donde alojo mis proyectos" width="80" height="80">
-        </a>
-        <br><em>Visita mi perfil de GitHub</em>
-    </p>
-
-    <h2 id="aprendizaje">📚 Mi Plan de Aprendizaje 2025</h2>
-
-    <h3>Próximos 3 meses</h3>
-    <ol>
-        <li>Dominar <strong>CSS Grid y Flexbox</strong> para layouts avanzados</li>
-        <li>Aprender <em>JavaScript ES6+</em> y programación asíncrona</li>
-        <li>Crear mi primer proyecto con <u>APIs externas</u></li>
-        <li>Implementar <mark>diseño responsive</mark> en todos mis proyectos</li>
-        <li>Aprender Git avanzado y metodologías ágiles</li>
-    </ol>
-
-    <h4>Recursos de Aprendizaje </h4>
-    <ul>
-        <li>Cursos Online:
-            <ul>
-                <li>freeCodeCamp - Certificaciones gratuitas</li>
-                <li>MDN Web Docs - Documentación oficial</li>
-                <li>JavaScript.info - Tutorial completo</li>
-            </ul>
-        </li>
-        <li>Libros:
-            <ul>
-                <li>"Clean Code" - Robert C. Martin</li>
-                <li>"You Don't Know JS" - Kyle Simpson</li>
-                <li>"Eloquent JavaScript" - Marijn Haverbeke</li>
-            </ul>
-        </li>
-        <li>Práctica:
-            <ul>
-                <li>HackerRank - Algoritmos</li>
-                <li>Codewars - Desafíos diarios</li>
-                <li>GitHub - Proyectos personales</li>
-            </ul>
-        </li>
-    </ul>
-
-    <hr>
-
-    <h2 id="contacto">📞 Conecta Conmigo</h2>
-    <p>
-        ¿Interesado en colaborar en algún proyecto o simplemente quieres conectar? 
-        <br>
-        ¡Estaré encantado de conocer a otros entusiastas de la tecnología!
-    </p>
-
-    <!-- Tabla de información de contacto -->
-    <table border="1">
-        <tr>
-            <th colspan="3">Información de Contacto</th>
-        </tr>
-        <tr>
-            <th>Plataforma</th>
-            <th>Enlace/Usuario</th>
-            <th>Descripción</th>
-        </tr>
-        <tr>
-            <td>GitHub</td>
-            <td>
-                <a href="https://github.com/Franklin-UC" target="_blank">
-                    github.com/Franklin-UC
+            <!-- FIGURE: Imagen con significado semántico -->
+            <figure>
+                <a href="https://www.javascript.com" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/120px-JavaScript-logo.png" 
+                         alt="JavaScript - Mi lenguaje favorito" width="100" height="100">
                 </a>
-            </td>
-            <td>Mis repositorios y contribuciones</td>
-        </tr>
-        <tr>
-            <td>LinkedIn</td>
-            <td>
-                <a href="https://linkedin.com/in/franklin-ronald-ulloa-chura-85b643347" target="_blank">
-                    Mi perfil profesional
-                </a>
-            </td>
-            <td>Red profesional y experiencia</td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td>
-                <a href="mailto:fulloac@unsa.edu.pe">fulloac@unsa.edu.pe</a>
-            </td>
-            <td>Contacto directo</td>
-        </tr>
-        <tr>
-            <td>Portfolio</td>
-            <td><a href="#sobre-mi">Esta página</a></td>
-            <td>Mi trabajo y proyectos</td>
-        </tr>
-    </table>
+                <figcaption>JavaScript - Mi lenguaje de programación favorito</figcaption>
+            </figure>
 
-    <!-- Lista de redes sociales con hipervínculos -->
-    <h3>🌐 Sígueme en redes:</h3>
-    <ul>
-        <li>
-            <a href="https://github.com/Franklin-UC" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/120px-Octicons-mark-github.svg.png" 
-                     alt="GitHub" width="25" height="25">
-                GitHub - Código y proyectos
-            </a>
-        </li>
-        <li>
-            <a href="https://linkedin.com/in/franklin-ronald-ulloa-chura-85b643347" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/120px-LinkedIn_logo_initials.png" 
-                     alt="LinkedIn" width="25" height="25">
-                LinkedIn - Red profesional
-            </a>
-        </li>
-    </ul>
+            <!-- SECTION: Subsección dentro del artículo -->
+            <section aria-labelledby="comidas">
+                <h3 id="comidas">🍕 Mis 5 Comidas Favoritas (para programar mejor)</h3>
+                <ul>
+                    <li>Pizza</li>
+                    <li>Makis</li>
+                    <li>Ceviche</li>
+                    <li>Arroz Chaufa</li>
+                    <li>Tallarines</li>
+                </ul>
+            </section>
+        </article>
+
+        <hr>
+
+        <!-- ARTICLE: Habilidades técnicas -->
+        <article id="habilidades">
+            <header>
+                <h2>💻 Habilidades Técnicas en Desarrollo</h2>
+            </header>
+
+            <!-- SECTION: Algoritmo de aprendizaje -->
+            <section aria-labelledby="algoritmo">
+                <h3 id="algoritmo">📝 Mi Algoritmo de Aprendizaje Diario</h3>
+                <ol>
+                    <li>Revisar conceptos del día anterior</li>
+                    <li>Estudiar nuevo tema por 2 horas</li>
+                    <li>Practicar con ejercicios hands-on</li>
+                    <li>Documentar lo aprendido en mi blog personal</li>
+                    <li>Hacer commit de código en GitHub</li>
+                    <li>Si hay dudas: buscar en Stack Overflow o documentación oficial</li>
+                    <li>Repetir hasta dominar el concepto</li>
+                </ol>
+            </section>
+
+            <!-- SECTION: Frontend Development -->
+            <section aria-labelledby="frontend">
+                <h3 id="frontend">Frontend Development</h3>
+                <ul>
+                    <li><strong>Tecnologías que domino:</strong>
+                        <ul>
+                            <li><u>HTML5</u> - Estructura semántica y accesible
+                                <ul>
+                                    <li>Elementos semánticos</li>
+                                    <li>Formularios avanzados</li>
+                                    <li>Multimedia</li>
+                                </ul>
+                            </li>
+                            <li><mark>CSS3</mark> - Diseño responsive y animaciones
+                                <ul>
+                                    <li>Flexbox y Grid</li>
+                                    <li>Animaciones CSS</li>
+                                    <li>Media queries</li>
+                                </ul>
+                            </li>
+                            <li><em>JavaScript</em> - Interactividad y lógica del cliente
+                                <ul>
+                                    <li>ES6+ Features</li>
+                                    <li>DOM Manipulation</li>
+                                    <li>Async/Await</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- FIGURE: Logos de tecnologías -->
+                <figure>
+                    <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" 
+                             alt="HTML5" width="60" height="60">
+                    </a>
+                    <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" rel="noopener noreferrer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/120px-CSS3_logo_and_wordmark.svg.png" 
+                             alt="CSS3" width="60" height="60">
+                    </a>
+                    <figcaption>Tecnologías web fundamentales que domino</figcaption>
+                </figure>
+            </section>
+
+            <!-- SECTION: Backend Development -->
+            <section aria-labelledby="backend">
+                <h4 id="backend">Backend Development (En aprendizaje)</h4>
+                <ul>
+                    <li>Node.js para desarrollo del lado del servidor</li>
+                    <li>Python con frameworks:
+                        <ul>
+                            <li>Django</li>
+                            <li>Flask</li>
+                            <li>FastAPI</li>
+                        </ul>
+                    </li>
+                    <li>Bases de datos:
+                        <ul>
+                            <li>MySQL - Relacionales</li>
+                            <li>MongoDB - NoSQL</li>
+                            <li>PostgreSQL - Avanzado</li>
+                        </ul>
+                    </li>
+                    <li>APIs RESTful y GraphQL</li>
+                </ul>
+            </section>
+        </article>
+
+        <hr>
+
+        <!-- ARTICLE: Proyectos -->
+        <article id="proyectos">
+            <header>
+                <h2>🛠️ Mis Proyectos Actuales y Futuros</h2>
+            </header>
+
+            <!-- SECTION: Tabla de proyectos -->
+            <section aria-labelledby="estado-proyectos">
+                <h3 id="estado-proyectos">📋 Estado de Mis Proyectos</h3>
+                <table border="1">
+                    <caption>Mis Proyectos de Desarrollo - <time datetime="2025">2025</time></caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Proyecto</th>
+                            <th scope="col">Tecnologías</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Progreso</th>
+                            <th scope="col">Enlace</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TechPortfolio</td>
+                            <td>HTML5, CSS3</td>
+                            <td>En desarrollo</td>
+                            <td>70%</td>
+                            <td><a href="https://github.com/Franklin-UC/techportfolio" target="_blank" rel="noopener noreferrer">GitHub</a></td>
+                        </tr>
+                        <tr>
+                            <td>Calculadora Web</td>
+                            <td>HTML, CSS, JavaScript</td>
+                            <td>Planificado</td>
+                            <td>0%</td>
+                            <td>Próximamente</td>
+                        </tr>
+                        <tr>
+                            <td>Sistema de Tareas</td>
+                            <td>React.js, Node.js</td>
+                            <td>Planificado</td>
+                            <td>0%</td>
+                            <td>Próximamente</td>
+                        </tr>
+                        <tr>
+                            <td>Blog Tecnológico</td>
+                            <td>HTML, CSS, JavaScript</td>
+                            <td>Diseño</td>
+                            <td>15%</td>
+                            <td>En análisis</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3" scope="row">Proyectos Completados</th>
+                            <td colspan="2">1 de 4</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <!-- SECTION: Fases de desarrollo -->
+            <section aria-labelledby="fases-desarrollo">
+                <h3 id="fases-desarrollo">Lista Ordenada: Fases de Desarrollo de Proyectos</h3>
+                <ol>
+                    <li>Análisis de requerimientos</li>
+                    <li>Diseño de la arquitectura</li>
+                    <li>Creación de mockups y wireframes</li>
+                    <li>Desarrollo del frontend</li>
+                    <li>Si requiere backend: implementar lógica del servidor</li>
+                    <li>Integración de ambos lados</li>
+                    <li>Testing y depuración</li>
+                    <li>Deploy a producción</li>
+                    <li>Mantenimiento y actualizaciones</li>
+                </ol>
+            </section>
+
+            <!-- FIGURE: Enlace a GitHub -->
+            <figure>
+                <a href="https://github.com/Franklin-UC" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/120px-Octicons-mark-github.svg.png" 
+                         alt="GitHub - Donde alojo mis proyectos" width="80" height="80">
+                </a>
+                <figcaption><em>Visita mi perfil de GitHub</em></figcaption>
+            </figure>
+        </article>
+
+        <hr>
+
+        <!-- ARTICLE: Plan de aprendizaje -->
+        <article id="aprendizaje">
+            <header>
+                <h2>📚 Mi Plan de Aprendizaje <time datetime="2025">2025</time></h2>
+            </header>
+
+            <!-- SECTION: Próximos 3 meses -->
+            <section aria-labelledby="proximo-trimestre">
+                <h3 id="proximo-trimestre">Próximos 3 meses</h3>
+                <ol>
+                    <li>Dominar <strong>CSS Grid y Flexbox</strong> para layouts avanzados</li>
+                    <li>Aprender <em>JavaScript ES6+</em> y programación asíncrona</li>
+                    <li>Crear mi primer proyecto con <u>APIs externas</u></li>
+                    <li>Implementar <mark>diseño responsive</mark> en todos mis proyectos</li>
+                    <li>Aprender Git avanzado y metodologías ágiles</li>
+                </ol>
+            </section>
+
+            <!-- SECTION: Recursos de aprendizaje -->
+            <section aria-labelledby="recursos">
+                <h4 id="recursos">Recursos de Aprendizaje</h4>
+                <ul>
+                    <li>Cursos Online:
+                        <ul>
+                            <li>freeCodeCamp - Certificaciones gratuitas</li>
+                            <li>MDN Web Docs - Documentación oficial</li>
+                            <li>JavaScript.info - Tutorial completo</li>
+                        </ul>
+                    </li>
+                    <li>Libros:
+                        <ul>
+                            <li>"Clean Code" - Robert C. Martin</li>
+                            <li>"You Don't Know JS" - Kyle Simpson</li>
+                            <li>"Eloquent JavaScript" - Marijn Haverbeke</li>
+                        </ul>
+                    </li>
+                    <li>Práctica:
+                        <ul>
+                            <li>HackerRank - Algoritmos</li>
+                            <li>Codewars - Desafíos diarios</li>
+                            <li>GitHub - Proyectos personales</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <hr>
+
+        <!-- ARTICLE: Información de contacto -->
+        <article id="contacto">
+            <header>
+                <h2>📞 Conecta Conmigo</h2>
+            </header>
+            
+            <p>
+                ¿Interesado en colaborar en algún proyecto o simplemente quieres conectar? 
+                <br>
+                ¡Estaré encantado de conocer a otros entusiastas de la tecnología!
+            </p>
+
+            <!-- SECTION: Tabla de contacto -->
+            <section aria-labelledby="info-contacto">
+                <h3 id="info-contacto">Información de Contacto</h3>
+                <table border="1">
+                    <caption>Canales de contacto y redes profesionales</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Plataforma</th>
+                            <th scope="col">Enlace/Usuario</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">GitHub</th>
+                            <td>
+                                <a href="https://github.com/Franklin-UC" target="_blank" rel="noopener noreferrer">
+                                    github.com/Franklin-UC
+                                </a>
+                            </td>
+                            <td>Mis repositorios y contribuciones</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">LinkedIn</th>
+                            <td>
+                                <a href="https://linkedin.com/in/franklin-ronald-ulloa-chura-85b643347" target="_blank" rel="noopener noreferrer">
+                                    Mi perfil profesional
+                                </a>
+                            </td>
+                            <td>Red profesional y experiencia</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Email</th>
+                            <td>
+                                <a href="mailto:fulloac@unsa.edu.pe">fulloac@unsa.edu.pe</a>
+                            </td>
+                            <td>Contacto directo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Portfolio</th>
+                            <td><a href="#sobre-mi">Esta página</a></td>
+                            <td>Mi trabajo y proyectos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION: Redes sociales -->
+            <section aria-labelledby="redes-sociales">
+                <h3 id="redes-sociales">🌐 Sígueme en redes:</h3>
+                <ul>
+                    <li>
+                        <a href="https://github.com/Franklin-UC" target="_blank" rel="noopener noreferrer">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/120px-Octicons-mark-github.svg.png" 
+                                 alt="GitHub" width="25" height="25">
+                            GitHub - Código y proyectos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/franklin-ronald-ulloa-chura-85b643347" target="_blank" rel="noopener noreferrer">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/120px-LinkedIn_logo_initials.png" 
+                                 alt="LinkedIn" width="25" height="25">
+                            LinkedIn - Red profesional
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </main>
 
     <hr>
-    
-    <!-- Navegación final -->
-    <p><strong>Navegación rápida:</strong></p>
-    <ul>
-        <li><a href="#sobre-mi">Ir a Sobre Mí</a></li>
-        <li><a href="#proyectos">Ver Mis Proyectos</a></li>
-        <li><a href="#contacto">Información de Contacto</a></li>
-        <li><a href="#habilidades">Mis Habilidades</a></li>
-    </ul>
-    
-    <p>
-        <em>© 2025 TechPortfolio - Franklin Ronald Ulloa Chura</em>
-        <br>
-        <small>
-            Desarrollado con HTML5 | Proyecto Individual - Introducción al Desarrollo Web
-            <br>
-            Laboratorio 04: Implementando Listas, Hipervínculos y Tablas
-            <br>
-        </small>
-    </p>
+
+    <!-- ASIDE: Barra lateral con navegación adicional -->
+    <aside aria-label="Navegación secundaria">
+        <p><strong>Navegación rápida:</strong></p>
+        <nav aria-label="Navegación rápida">
+            <ul>
+                <li><a href="#sobre-mi">Ir a Sobre Mí</a></li>
+                <li><a href="#proyectos">Ver Mis Proyectos</a></li>
+                <li><a href="#contacto">Información de Contacto</a></li>
+                <li><a href="#habilidades">Mis Habilidades</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- FOOTER: Pie de página con información de copyright y contacto -->
+    <footer>
+        <address>
+            <p>
+                <em>© <time datetime="2025">2025</time> TechPortfolio - Franklin Ronald Ulloa Chura</em>
+                <br>
+                <small>
+                    Desarrollado con HTML5 | Proyecto Individual - Introducción al Desarrollo Web
+                    <br>
+                    <strong>Laboratorio 05: HTML Semántico</strong> - Implementando elementos semánticos para mejor accesibilidad y SEO
+                    <br>
+                    Contacto: <a href="mailto:fulloac@unsa.edu.pe">fulloac@unsa.edu.pe</a>
+                </small>
+            </p>
+        </address>
+    </footer>
 
 </body>
 </html>
