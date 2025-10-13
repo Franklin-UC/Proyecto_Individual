@@ -1,0 +1,52 @@
+/* Estilos para la tabla de proyectos */
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 25px 0;
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    overflow: hidden;
+}
+
+caption {
+    caption-side: top;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    color: var(--color-texto-secundario);
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px; 
+    border: 1px solid var(--color-borde);
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--color-primario);
+    color: white;
+    font-weight: 600;
+}
+
+/* Color de fondo alternado para las filas del cuerpo de la tabla */
+tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa; 
+}
+
+/* Efecto hover en las filas para mejorar la interactividad */
+tbody tr:hover {
+    background-color: #e9ecef; 
+    cursor: pointer;
+}
+
+/* Estilo específico para los enlaces de GitHub en la tabla */
+td a[href*="github.com"] {
+    font-weight: bold;
+    color: #171515;
+}
+
+td a[href*="github.com"]::after {
+    content: " 🐙"; /* Añade un emoji de pulpo (Octocat) */
+}

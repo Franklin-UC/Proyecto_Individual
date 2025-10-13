@@ -1,0 +1,113 @@
+/* -------------------
+   Estilos para el Formulario
+   ------------------- */
+fieldset {
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fdfdfd;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--color-primario);
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Pseudo-clase :focus para mejorar la experiencia de usuario */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.25);
+}
+
+/* Estilos para los botones del formulario */
+button {
+    padding: 12px 22px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: var(--color-primario);
+    color: white;
+}
+button[type="submit"]:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+}
+
+button[type="reset"] {
+    background-color: var(--color-texto-secundario);
+    color: white;
+}
+button[type="reset"]:hover {
+    background-color: #5c636a;
+    transform: translateY(-2px);
+}
+
+/* -------------------
+   Estilos para la Tabla de Contacto 
+   ------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 25px 0;
+    box-shadow: var(--sombra-suave);
+    border-radius: var(--radio-borde);
+    overflow: hidden;
+}
+
+caption {
+    caption-side: top;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    color: var(--color-texto-secundario);
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px; 
+    border: 1px solid var(--color-borde);
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--color-primario);
+    color: white;
+    font-weight: 600;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa; 
+}
+
+tbody tr:hover {
+    background-color: #e9ecef; 
+}

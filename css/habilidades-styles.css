@@ -1,0 +1,20 @@
+/* Selector de descendiente y pseudo-clase de estructura */
+/* Estilo para los elementos impares de las listas ordenadas para mejorar la legibilidad */
+#habilidades ol > li:nth-child(odd) {
+    background-color: #f0f1f3; /* Un gris muy sutil */
+    padding: 8px;
+    margin-bottom: 5px; /* Espacio entre elementos */
+    border-radius: 5px;
+}
+
+/* Pseudo-elementos para decorar títulos h3 en esta sección */
+#habilidades h3::before {
+    content: "🔹 ";
+    color: var(--color-primario);
+}
+
+/* Estilo para las listas anidadas (ul dentro de ul) */
+#habilidades ul ul {
+    margin-left: 20px;
+    padding-left: 15px;
+}

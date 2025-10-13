@@ -1,0 +1,11 @@
+/* Pseudo-elementos para el párrafo de bienvenida */
+.parrafo-bienvenida::first-letter {
+    font-size: 3em;
+    color: var(--color-primario);
+    float: left;
+    line-height: 1;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Puedes añadir más estilos que solo apliquen a la página de inicio aquí */

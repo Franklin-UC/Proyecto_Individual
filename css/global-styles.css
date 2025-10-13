@@ -1,0 +1,130 @@
+/* -------------------
+   1. Estilos Globales y Variables
+   ------------------- */
+:root {
+    --color-primario: #0d6efd; 
+    --color-fondo: #f8f9fa; 
+    --color-tarjeta: #ffffff; 
+    --color-texto: #212529; 
+    --color-texto-secundario: #6c757d; 
+    --color-borde: #dee2e6; 
+    --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.05);
+    --radio-borde: 10px; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* -------------------
+   2. Tipografía General
+   ------------------- */
+h1, h2, h3, h4 {
+    color: var(--color-primario);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em; 
+    border-bottom: 2px solid var(--color-borde);
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0a58ca; 
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--color-borde);
+    margin: 40px 0;
+}
+
+/* -------------------
+   3. Contenedores y Layout
+   ------------------- */
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--color-tarjeta);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 20px;
+}
+
+/* -------------------
+   4. Navegación Principal
+   ------------------- */
+.main-nav {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: var(--radio-borde);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.main-nav a:hover,
+.main-nav a.active { /* Estilo para la página activa */
+    text-decoration: none;
+    color: #a9cfff;
+}
+
+/* -------------------
+   9. Footer
+   ------------------- */
+footer {
+    text-align: center;
+    color: var(--color-texto-secundario);
+    font-size: 0.9em;
+}
+
+footer strong {
+    color: var(--color-texto);
+}
+
+/* -------------------
+   10. Estilos Avanzados Globales
+   ------------------- */
+::selection {
+    background-color: var(--color-primario);
+    color: white;
+}
