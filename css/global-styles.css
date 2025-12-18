@@ -1,8 +1,7 @@
 /* ============================================================
-   1. VARIABLES DE COLOR Y TEMAS (PALETA PROFESIONAL)
+   1. VARIABLES DE COLOR Y TEMAS (PALETA UNIFICADA)
    ============================================================ */
 :root {
-    /* Paleta Modo Claro (Pharma Modern) */
     --primary: #0ea5e9;
     --primary-hover: #0284c7;
     --bg-body: #f1f5f9;
@@ -42,9 +41,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/* ============================================================
-   3. CONTENEDORES (LAYOUT PROFESIONAL)
-   ============================================================ */
+/* Contenedores Principales */
 header, main, footer {
     max-width: 1000px;
     margin: 20px auto;
@@ -56,14 +53,8 @@ header, main, footer {
 }
 
 /* ============================================================
-   4. NAVEGACIÓN Y MENÚ
+   3. NAVEGACIÓN Y MENÚ
    ============================================================ */
-.main-nav {
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-}
-
 .main-nav ul {
     list-style: none;
     display: flex;
@@ -72,6 +63,7 @@ header, main, footer {
     gap: 20px;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap; /* Para que sea responsivo en móviles */
 }
 
 .main-nav a {
@@ -89,9 +81,6 @@ header, main, footer {
     background-color: rgba(14, 165, 233, 0.1); 
 }
 
-/* ============================================================
-   5. BOTÓN DE TEMA (INTERACTIVO)
-   ============================================================ */
 .btn-tema {
     background: none;
     border: 1px solid var(--border);
@@ -109,7 +98,52 @@ header, main, footer {
 }
 
 /* ============================================================
-   6. NOTIFICACIONES (TOAST SYSTEM)
+   4. TABLAS GLOBALES (PROYECTOS Y MENSAJES)
+   ============================================================ */
+table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0;
+    margin: 25px 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+thead th {
+    background-color: var(--primary);
+    color: #ffffff !important;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: none;
+}
+
+thead tr:first-child th:first-child { border-top-left-radius: var(--radius); }
+thead tr:first-child th:last-child { border-top-right-radius: var(--radius); }
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+td:last-child { border-right: none; }
+tbody tr:last-child td { border-bottom: none; }
+
+tbody tr:nth-of-type(even) { background-color: rgba(0, 0, 0, 0.02); }
+body.dark-mode tbody tr:nth-of-type(even) { background-color: rgba(255, 255, 255, 0.02); }
+
+tbody tr:hover {
+    background-color: rgba(14, 165, 233, 0.1) !important;
+    cursor: pointer;
+}
+
+/* ============================================================
+   5. NOTIFICACIONES (TOAST SYSTEM)
    ============================================================ */
 #toast-container {
     position: fixed;
@@ -128,7 +162,7 @@ header, main, footer {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     border-left: 5px solid var(--primary);
-    animation: slideIn 0.3s ease; 
+    animation: slideIn 0.3s ease forwards; 
 }
 
 @keyframes slideIn {
@@ -137,7 +171,7 @@ header, main, footer {
 }
 
 /* ============================================================
-   7. ELEMENTOS DE TEXTO Y OTROS
+   6. ELEMENTOS COMUNES Y UTILIDADES
    ============================================================ */
 h1, h2, h3 {
     color: var(--primary);
@@ -148,6 +182,11 @@ hr {
     border: none;
     border-top: 1px solid var(--border);
     margin: 30px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {

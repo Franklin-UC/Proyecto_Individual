@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Franklin Ulloa Chura">
     <title>Contacto | TechPortfolio</title>
     <link rel="stylesheet" href="css/global-styles.css">
     <link rel="stylesheet" href="css/contacto-styles.css">
@@ -22,19 +24,30 @@
         </nav>
     </header>
     <main>
-        <h2>Conecta Conmigo</h2>
-        <form action="/enviar-contacto" method="POST">
-            <label for="nombre_contacto">Nombre:</label>
-            <input type="text" id="nombre_contacto" name="nombre_contacto" required style="width:100%; padding:10px; margin-bottom:15px;">
-            
-            <label for="email_contacto">Email:</label>
-            <input type="email" id="email_contacto" name="email_contacto" required style="width:100%; padding:10px; margin-bottom:15px;">
-            
-            <label for="mensaje_contacto">Mensaje:</label>
-            <textarea id="mensaje_contacto" name="mensaje_contacto" rows="5" required style="width:100%; padding:10px; margin-bottom:15px;"></textarea>
-            
-            <button type="submit" style="padding:10px 20px; background:var(--primary); color:white; border:none; border-radius:5px; cursor:pointer;">Enviar Mensaje</button>
-        </form>
+        <section>
+            <h2>Conecta Conmigo</h2>
+            <form action="/enviar-contacto" method="POST" class="form-contacto">
+                <div class="form-group">
+                    <label for="nombre_contacto">Nombre:</label>
+                    <input type="text" id="nombre_contacto" name="nombre_contacto" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email_contacto">Email:</label>
+                    <input type="email" id="email_contacto" name="email_contacto" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje_contacto">Mensaje:</label>
+                    <textarea id="mensaje_contacto" name="mensaje_contacto" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    <button type="reset" class="btn-reset">Limpiar</button>
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <address>

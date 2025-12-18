@@ -1,16 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // --- 1. Modo Oscuro Persistente ---
+    // --- 1. Configuración de Modo Oscuro ---
     const themeToggle = document.getElementById('btnTema');
     const body = document.body;
 
-    // Función para actualizar el texto del botón
     const updateButtonText = (isDark) => {
         themeToggle.textContent = isDark ? "☀️" : "🌙";
     };
 
-    // Carga inicial
-    const savedTheme = localStorage.getItem('tema');
-    if (savedTheme === 'oscuro') {
+    // Cargar preferencia guardada
+    if (localStorage.getItem('tema') === 'oscuro') {
         body.classList.add('dark-mode');
         updateButtonText(true);
     }
@@ -19,40 +17,42 @@ document.addEventListener("DOMContentLoaded", () => {
         const isDark = body.classList.toggle('dark-mode');
         localStorage.setItem('tema', isDark ? 'oscuro' : 'claro');
         updateButtonText(isDark);
-        
-        // Si tienes el sistema de notificaciones del proyecto de referencia:
-        if (typeof mostrarNotificacion === "function") {
-            mostrarNotificacion(isDark ? "Modo oscuro activado" : "Modo claro activado", "info");
-        }
+        mostrarNotificacion(isDark ? "Modo oscuro activado" : "Modo claro activado");
     });
 
-    // --- 2. Notificaciones (Toast) ---
+    // --- 2. Sistema de Notificaciones (Toasts) ---
     function mostrarNotificacion(mensaje) {
-        const container = document.getElementById("toast-container") || (() => {
-            const c = document.createElement("div");
-            c.id = "toast-container";
-            document.body.appendChild(c);
-            return c;
-        })();
+        let container = document.getElementById("toast-container");
+        if (!container) {
+            container = document.createElement("div");
+            container.id = "toast-container";
+            document.body.appendChild(container);
+        }
+
         const toast = document.createElement("div");
         toast.className = "toast";
         toast.innerText = mensaje;
+        
         container.appendChild(toast);
-        setTimeout(() => toast.remove(), 3000);
+
+        setTimeout(() => {
+            toast.style.opacity = "0";
+            setTimeout(() => toast.remove(), 500);
+        }, 3000);
     }
 
-    // Notificación al enviar formulario con éxito
+    // Detectar éxito en el envío del formulario 
     if (new URLSearchParams(window.location.search).get('exito')) {
         mostrarNotificacion("¡Mensaje enviado con éxito!");
     }
 
-    // --- 3. Validación de Formulario  ---
-    const form = document.querySelector("form");
-    if (form) {
-        form.addEventListener("submit", (e) => {
-            const email = document.getElementById("email_contacto").value;
-            if (!email.includes("@")) {
-                alert("Por favor, ingresa un correo válido.");
+    // --- 3. Validación de Formulario ---
+    const contactoForm = document.querySelector('.form-contacto');
+    if (contactoForm) {
+        contactoForm.addEventListener('submit', (e) => {
+            const emailInput = document.getElementById('email_contacto');
+            if (emailInput && !emailInput.value.includes('.')) {
+                alert("Por favor, ingresa un correo electrónico válido (ejemplo@dominio.com).");
                 e.preventDefault();
             }
         });
