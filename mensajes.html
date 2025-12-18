@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mensajes Recibidos | Admin</title>
+    <link rel="stylesheet" href="css/global-styles.css">
+    <link rel="stylesheet" href="css/contacto-styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🚀 TechPortfolio - Mi Espacio Digital</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Sobre mí</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="mensajes.html">Mensajes</a></li> 
+                <li><button id="btnTema" class="btn-tema">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Mensajes del Formulario</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Mensaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{TABLA_CONTENIDO}}
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <address>
+            <p>
+                <em>© <time datetime="2025">2025</time> TechPortfolio - Franklin Ronald Ulloa Chura</em>
+                <br>
+                <small>Desarrollado con HTML5 | Proyecto Individual - Introducción al Desarrollo Web</small>
+            </p>
+        </address>
+    </footer>
+</body>
+</html>

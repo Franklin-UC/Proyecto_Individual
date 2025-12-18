@@ -1,130 +1,157 @@
-/* -------------------
-   1. Estilos Globales y Variables
-   ------------------- */
+/* ============================================================
+   1. VARIABLES DE COLOR Y TEMAS (PALETA PROFESIONAL)
+   ============================================================ */
 :root {
-    --color-primario: #0d6efd; 
-    --color-fondo: #f8f9fa; 
-    --color-tarjeta: #ffffff; 
-    --color-texto: #212529; 
-    --color-texto-secundario: #6c757d; 
-    --color-borde: #dee2e6; 
-    --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.05);
-    --radio-borde: 10px; 
+    /* Paleta Modo Claro (Pharma Modern) */
+    --primary: #0ea5e9;
+    --primary-hover: #0284c7;
+    --bg-body: #f1f5f9;
+    --bg-card: #ffffff;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+}
+
+/* Variables para Modo Oscuro */
+body.dark-mode {
+    --bg-body: #0f172a;
+    --bg-card: #1e293b;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --primary: #38bdf8; 
+}
+
+/* ============================================================
+   2. ESTILOS BASE Y RESET
+   ============================================================ */
+* {
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/* -------------------
-   2. Tipografía General
-   ------------------- */
-h1, h2, h3, h4 {
-    color: var(--color-primario);
-    font-weight: 600;
-}
-
-h1 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 2em; 
-    border-bottom: 2px solid var(--color-borde);
-    padding-bottom: 10px;
-    margin-top: 40px;
-}
-
-a {
-    color: var(--color-primario);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #0a58ca; 
-    text-decoration: underline;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid var(--color-borde);
-    margin: 40px 0;
-}
-
-/* -------------------
-   3. Contenedores y Layout
-   ------------------- */
+/* ============================================================
+   3. CONTENEDORES (LAYOUT PROFESIONAL)
+   ============================================================ */
 header, main, footer {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--color-tarjeta);
-    border-radius: var(--radio-borde);
-    box-shadow: var(--sombra-suave);
-    margin-bottom: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow); 
 }
 
-/* -------------------
-   4. Navegación Principal
-   ------------------- */
+/* ============================================================
+   4. NAVEGACIÓN Y MENÚ
+   ============================================================ */
 .main-nav {
-    background-color: #333;
-    padding: 15px 0;
-    text-align: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
     margin-bottom: 20px;
-    border-radius: var(--radio-borde);
 }
 
 .main-nav ul {
     list-style: none;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     padding: 0;
-}
-
-.main-nav li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0;
 }
 
 .main-nav a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 5px 10px;
+    color: var(--text-muted);
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
 }
 
-.main-nav a:hover,
-.main-nav a.active { /* Estilo para la página activa */
-    text-decoration: none;
-    color: #a9cfff;
+.main-nav a:hover, 
+.main-nav a.active {
+    color: var(--primary);
+    background-color: rgba(14, 165, 233, 0.1); 
 }
 
-/* -------------------
-   9. Footer
-   ------------------- */
+/* ============================================================
+   5. BOTÓN DE TEMA (INTERACTIVO)
+   ============================================================ */
+.btn-tema {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-tema:hover {
+    background-color: var(--border);
+    transform: scale(1.1); 
+}
+
+/* ============================================================
+   6. NOTIFICACIONES (TOAST SYSTEM)
+   ============================================================ */
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-left: 5px solid var(--primary);
+    animation: slideIn 0.3s ease; 
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* ============================================================
+   7. ELEMENTOS DE TEXTO Y OTROS
+   ============================================================ */
+h1, h2, h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 30px 0;
+}
+
 footer {
     text-align: center;
-    color: var(--color-texto-secundario);
-    font-size: 0.9em;
-}
-
-footer strong {
-    color: var(--color-texto);
-}
-
-/* -------------------
-   10. Estilos Avanzados Globales
-   ------------------- */
-::selection {
-    background-color: var(--color-primario);
-    color: white;
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
