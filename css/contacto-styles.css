@@ -18,9 +18,8 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 12px;
-    /* Usamos variables globales para mantener la consistencia */
     border: 1px solid var(--border); 
-    background-color: var(--bg-body); /* Cambiado a un tono ligeramente gris en modo claro */
+    background-color: var(--bg-body); 
     color: var(--text-main);
     border-radius: 8px;
     font-size: 1rem;
@@ -43,18 +42,30 @@ input:focus, textarea:focus {
 }
 
 .btn-submit {
-    background-color: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, #b91c1c 100%);
     color: white;
-    padding: 12px 24px;
+    padding: 12px 30px;
     border: none;
-    border-radius: 8px;
-    font-weight: 600;
+    border-radius: 50px; 
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-submit:hover {
-    background-color: var(--primary-hover);
+    transform: translateY(-2px); 
+    box-shadow: 0 0 20px var(--primary);
+    background: var(--primary);
+}
+
+.btn-submit:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 5px var(--primary);
 }
 
 .btn-reset {
@@ -62,6 +73,6 @@ input:focus, textarea:focus {
     color: var(--text-muted);
     padding: 12px 24px;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 50px;
     cursor: pointer;
 }
