@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Restringido | Admin</title>
+    <link rel="stylesheet" href="css/global-styles.css">
+    <link rel="stylesheet" href="css/contacto-styles.css">
+    <style>
+        body { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0;
+        }
+        .login-card { 
+            background: var(--bg-card); 
+            padding: 40px; 
+            border-radius: var(--radius); 
+            box-shadow: var(--shadow); 
+            border: 1px solid var(--border); 
+            max-width: 400px; 
+            width: 90%; 
+            text-align: center; 
+        }
+        .lock-icon { 
+            font-size: 3rem; 
+            margin-bottom: 20px; 
+            display: block; 
+            animation: pulse-border 2s infinite;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <span class="lock-icon">🔒</span>
+        <h2>Página protegida</h2>
+        <p>Introduce la contraseña de administrador para ver los mensajes.</p>
+        
+        <form action="/login" method="POST" class="form-contacto">
+            <div class="form-group">
+                <input type="password" id="inputPassword" name="password" placeholder="Contraseña..." required>
+            </div>
+            
+            {{MENSAJE_ERROR}} 
+            
+            <button type="submit" class="btn-submit" style="width: 100%; margin-top: 10px;">
+                Ingresar al Panel
+            </button>
+        </form>
+        
+        <div style="margin-top: 20px;">
+            <a href="index.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">← Volver al Inicio</a>
+        </div>
+    </div>
+</body>
+</html>

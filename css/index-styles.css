@@ -15,37 +15,33 @@ figure {
     margin: 20px 0;
 }
 
-/* La imagen en sí */
+/* La imagen*/
 figure img {
-    /* Recorte de esquinas (estilo Sci-Fi / Cyberpunk) */
-    clip-path: polygon(
-        10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%
-    );
-    filter: grayscale(80%); /* Desaturado por defecto */
+    /* Recorte de esquinas*/
+    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+    filter: grayscale(80%); 
     transition: all 0.5s ease;
-    border: 2px solid transparent; /* Espacio para el borde */
+    border: 2px solid transparent; 
 }
 
-/* Marco decorativo "dibujado" con pseudo-elementos */
+/* Marco decorativo*/
 figure::after {
     content: '';
     position: absolute;
     top: -5px; left: -5px; right: -5px; bottom: -5px;
     background: linear-gradient(45deg, var(--primary), transparent 40%, transparent 60%, var(--primary));
     z-index: -1;
-    clip-path: polygon(
-        10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%
-    );
+    clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
     opacity: 0.5;
     transition: opacity 0.3s;
 }
 
-/* Efecto Hover: Piloto Activo */
+/* Efecto Hover*/
 figure:hover img {
-    filter: grayscale(0%); /* Color total */
+    filter: grayscale(0%);
     transform: scale(1.02);
 }
 
 figure:hover::after {
-    opacity: 1; /* El marco brilla más */
+    opacity: 1;
 }

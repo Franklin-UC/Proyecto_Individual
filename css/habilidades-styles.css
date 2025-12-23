@@ -7,11 +7,11 @@
 }
 
 #habilidades h3::before {
-    content: "/// "; /* Guiño a la marca "M" de BMW */
+    content: "/// "; 
     color: var(--primary);
     font-weight: 900;
     margin-right: 5px;
-    letter-spacing: -2px; /* Junta las barras para que parezcan un logo */
+    letter-spacing: -2px; 
 }
 
 #habilidades ul ul {

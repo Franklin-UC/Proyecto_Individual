@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </svg>`;
 
     const updateButtonIcon = (isDark) => {
-        // Si es oscuro, mostramos el Sol (para cambiar a claro). 
-        // Si es claro, mostramos la Luna (para cambiar a oscuro).
         themeToggle.innerHTML = isDark ? iconSol : iconLuna;
     };
 
@@ -40,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const isDark = body.classList.toggle('dark-mode');
         localStorage.setItem('tema', isDark ? 'oscuro' : 'claro');
         updateButtonIcon(isDark);
-        mostrarNotificacion(isDark ? "Modo Stealth Activado" : "Modo Showroom Activado");
+        mostrarNotificacion(isDark ? "Modo Oscuro Activado" : "Modo Claro Activado");
     });
 
     // --- 2. Sistema de Notificaciones (Toasts) ---

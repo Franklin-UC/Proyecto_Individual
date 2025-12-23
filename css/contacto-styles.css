@@ -30,7 +30,7 @@ textarea {
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--primary);
-    background-color: var(--bg-card); /* Mantiene el color del contenedor actual */
+    background-color: var(--bg-card);
     box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
 }
 

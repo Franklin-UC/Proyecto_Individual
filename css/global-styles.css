@@ -3,7 +3,7 @@
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
 :root {
-    /* MODO CLARO: Estilo "Showroom" (Plata y Rojo Deportivo) */
+    /* MODO CLARO: Estilo "Showroom"*/
     --primary: #d90429;       
     --primary-hover: #ef233c; 
     --bg-body: #f3f4f6;       
@@ -17,19 +17,19 @@
 
 /* Variables para Modo Oscuro */
 body.dark-mode {
-    /* MODO OSCURO: Estilo "Stealth" (Negro Mate y Rojo Neón) */
+    /* MODO OSCURO: Estilo "Stealth"*/
     --bg-body: #000000;       
     --bg-card: #121212;       
     --text-main: #e5e5e5;     
     --text-muted: #a3a3a3;    
     --border: #27272a;      
     
-    /* Efecto de brillo de los faros */
+    /* Efecto de brillo*/
     --shadow: 0 4px 25px rgba(255, 30, 60, 0.25); 
     
     --primary: #ff2a3b;       
     --primary-hover: #ff5c69; 
-    /* Patrón de fibra de carbono generado con CSS */
+    /* Patrón de fibra de carbono*/
     background-image: 
         linear-gradient(45deg, #121212 25%, transparent 25%, transparent 75%, #121212 75%, #121212),
         linear-gradient(45deg, #121212 25%, transparent 25%, transparent 75%, #121212 75%, #121212);
@@ -102,7 +102,7 @@ header, main, footer {
     width: 100%;
     height: 100%;
     background-color: var(--primary);
-    transform: skewX(-20deg) scaleX(0); 
+    transform: skewX(0deg) scaleX(0); 
     transform-origin: left;
     transition: transform 0.3s ease;
     z-index: -1;
@@ -112,7 +112,7 @@ header, main, footer {
 
 .main-nav a:hover::before,
 .main-nav a.active::before {
-    transform: skewX(-20deg) scaleX(1); 
+    transform: skewX(0deg) scaleX(1); 
 }
 
 .main-nav a:hover,
@@ -134,7 +134,7 @@ header, main, footer {
     color: var(--text-main);
     width: 45px;
     height: 45px;
-    border-radius: 50%; /* Círculo perfecto */
+    border-radius: 50%; 
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -147,7 +147,7 @@ header, main, footer {
 }
 @keyframes pulse-border {
     0% { box-shadow: 0 0 0 0 rgba(217, 4, 41, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(217, 4, 41, 0); } /* Onda expansiva */
+    70% { box-shadow: 0 0 0 10px rgba(217, 4, 41, 0); } 
     100% { box-shadow: 0 0 0 0 rgba(217, 4, 41, 0); }
 }
 
@@ -155,7 +155,7 @@ header, main, footer {
     background-color: var(--border);
     border-color: var(--primary);
     color: white;
-    animation: none; /* Se detiene al poner el mouse */
+    animation: none;
     transform: rotate(15deg) scale(1.1);
 }
 
@@ -164,7 +164,7 @@ header, main, footer {
    4. TABLAS GLOBALES (PROYECTOS Y MENSAJES)
    ============================================================ */
 table {
-    width: 100%; /* Mantiene el ancho completo */
+    width: 100%; 
     border-collapse: separate;
     border-spacing: 0;
     margin: 25px 0;
@@ -203,7 +203,7 @@ tbody td {
     font-family: 'Consolas', 'Monaco', monospace; 
     font-size: 0.95rem;
     
-    /* LÍNEAS SUTILES PARA HUD */
+    /* LÍNEAS SUTILES */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -211,13 +211,13 @@ tbody td {
 td:last-child { border-right: none; }
 tbody tr:last-child td { border-bottom: none; }
 
-/* Efecto Hover (Pasar el mouse) */
+/* Efecto Hover*/
 tbody tr:hover {
     background-color: rgba(255, 30, 60, 0.1) !important; 
     cursor: pointer;
 }
 
-/* Columna 3 (Estado/Email) destacada */
+/* Columna 3*/
 tbody tr td:nth-child(3) {
     font-weight: bold;
     color: var(--text-main);
@@ -292,7 +292,7 @@ body.dark-mode img {
     opacity: 0.8;
 }
 
-/* Al pasar el mouse: Se "encienden" como los faros */
+/* Al pasar el mouse se "encienden"*/
 body.dark-mode img:hover {
     filter: grayscale(0%) contrast(1) drop-shadow(0 0 10px var(--primary));
     transform: scale(1.05);
@@ -308,14 +308,14 @@ body.dark-mode img:hover {
     background-color: var(--bg-body);
 }
 
-/* El "pulgar" o indicador (La parte que se mueve) */
+/* El indicador se mueve*/
 ::-webkit-scrollbar-thumb {
     background-color: #333; 
     border-radius: 5px;
     border: 2px solid var(--bg-body); 
 }
 
-/* Al pasar el mouse o arrastrar: ¡Se pone ROJO! */
+/* Al pasar el mouse o arrastrar */
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--primary);
     box-shadow: 0 0 10px var(--primary); 
