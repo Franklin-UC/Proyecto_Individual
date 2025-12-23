@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // --- 1. Configuración de Modo Oscuro (Iconos SVG Premium) ---
+    /* ================================================================
+       1. SISTEMA DE TEMA (MODO OSCURO / CLARO)
+       ================================================================ 
+    */
     const themeToggle = document.getElementById('btnTema');
     const body = document.body;
 
@@ -26,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         themeToggle.innerHTML = isDark ? iconSol : iconLuna;
     };
 
-    // Cargar preferencia guardada
+    // PERSISTENCIA: Revisar si el usuario ya había elegido un tema anteriormente
     if (localStorage.getItem('tema') === 'oscuro') {
         body.classList.add('dark-mode');
         updateButtonIcon(true);
@@ -34,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateButtonIcon(false);
     }
 
+    // Evento Click: Alternar clase 'dark-mode' y guardar preferencia
     themeToggle.addEventListener('click', () => {
         const isDark = body.classList.toggle('dark-mode');
         localStorage.setItem('tema', isDark ? 'oscuro' : 'claro');
@@ -41,9 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarNotificacion(isDark ? "Modo Oscuro Activado" : "Modo Claro Activado");
     });
 
-    // --- 2. Sistema de Notificaciones (Toasts) ---
+    /* ================================================================
+       2. SISTEMA DE NOTIFICACIONES (TOASTS)
+       ================================================================ 
+       Crea pequeñas alertas flotantes que desaparecen automáticamente.
+    */
     function mostrarNotificacion(mensaje) {
         let container = document.getElementById("toast-container");
+        // Crear contenedor si no existe
         if (!container) {
             container = document.createElement("div");
             container.id = "toast-container";
@@ -56,25 +65,30 @@ document.addEventListener("DOMContentLoaded", () => {
         
         container.appendChild(toast);
 
+        // Eliminar notificación después de 3 segundos
         setTimeout(() => {
-            toast.style.opacity = "0";
-            setTimeout(() => toast.remove(), 500);
+            toast.style.opacity = "0"; // Efecto desvanecer
+            setTimeout(() => toast.remove(), 500); // Eliminar del DOM
         }, 3000);
     }
 
-    // Detectar éxito en el envío del formulario 
+    // Detectar si la URL tiene el parámetro (viene del server.py tras enviar formulario)
     if (new URLSearchParams(window.location.search).get('exito')) {
         mostrarNotificacion("¡Mensaje enviado con éxito!");
     }
 
-    // --- 3. Validación de Formulario ---
+    /* ================================================================
+       3. VALIDACIONES DE FORMULARIO
+       ================================================================ 
+    */
     const contactoForm = document.querySelector('.form-contacto');
     if (contactoForm) {
         contactoForm.addEventListener('submit', (e) => {
             const emailInput = document.getElementById('email_contacto');
+            // Validación extra simple además del 'type=email' de HTML
             if (emailInput && !emailInput.value.includes('.')) {
                 alert("Por favor, ingresa un correo electrónico válido (ejemplo@dominio.com).");
-                e.preventDefault();
+                e.preventDefault(); // Detener el envío si está mal
             }
         });
     }

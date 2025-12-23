@@ -1,9 +1,9 @@
 /* ============================================================
-   1. VARIABLES DE COLOR Y TEMAS 
+   1. VARIABLES CSS (CUSTOM PROPERTIES)
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
 :root {
-    /* MODO CLARO: Estilo "Showroom"*/
+    /* Paleta de Colores - Modo Claro (Default) */
     --primary: #d90429;       
     --primary-hover: #ef233c; 
     --bg-body: #f3f4f6;       
@@ -17,7 +17,6 @@
 
 /* Variables para Modo Oscuro */
 body.dark-mode {
-    /* MODO OSCURO: Estilo "Stealth"*/
     --bg-body: #000000;       
     --bg-card: #121212;       
     --text-main: #e5e5e5;     
@@ -39,7 +38,7 @@ body.dark-mode {
 }
 
 /* ============================================================
-   2. ESTILOS BASE Y RESET
+   2. ESTILOS BASE
    ============================================================ */
 * {
     box-sizing: border-box;
@@ -67,7 +66,7 @@ header, main, footer {
 }
 
 /* ============================================================
-   3. NAVEGACIÓN Y MENÚ
+   3. NAVEGACIÓN (HEADER)
    ============================================================ */
 .main-nav ul {
     list-style: none;
